@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+    <!-- Vinculamos el archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="volver-btn" class="btnvolver">
+        <img src="img/volver.png" style="width: 35px; height: 35px;">
+    </button>
+
+    <!-- Script para obtener el parámetro de la URL -->
+    <script>
+        // Evento de clic para el botón de volver
+        document.getElementById('volver-btn').addEventListener('click', function() {
+            // Redireccionar al usuario de vuelta a index.html
+            window.location.href = 'index.html';
+        });
+    </script>
+
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Título de la página -->
+        
+        <!-- Contenido adicional de tu página juego.html -->
+
+        <!-- Vinculamos el archivo JavaScript -->
+        <script src="script.js"></script>
+    </div>
+
+    <!-- Script para obtener el parámetro de la URL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Obtener el parámetro 'dato' de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const dato = urlParams.get('dato');
+
+            // Imprimir el dato en la consola
+            console.log('Dato recibido:', dato);
+            console.log('Cantidad de caracteres:', dato.length);
+        });
+    </script>
+
+    <script src="juego.js" defer></script>
+    <div id="tablero">
+
+    </div>
+
+
+</body>
+</html>

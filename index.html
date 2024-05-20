@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <!-- Vinculamos el archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Botón "Ideas" posicionado fuera del contenedor principal -->
+	<input type="checkbox" id="btn-modal">
+	<label for="btn-modal" class="lbl-modal">
+         <img src="img/bombilla.png" alt="Icono de idea" style="width: 35px; height: 35px;">
+    </label>
+	<div class="modal">
+		<div id="popup" class="contenedor">
+			<header>Palabra Aleatoria</header>
+			<label for="btn-modal">X</label>
+			<div class="contenido">
+                <p id="popup-word"></p>
+			</div>
+		</div>
+	</div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Título de la página -->
+        <h1>WORDLE</h1>
+        
+        <!-- Formulario -->
+        <form id="miFormulario">
+            <!-- Campo de entrada de texto -->
+            <input type="text" placeholder="Ingrese la palabra" id="word-input" name="word">
+            
+            <!-- Contenedor para los botones "Jugar" y "Aleatorio" -->
+            <div class="buttons">
+                <button id="jugar-btn">Jugar</button>
+                <button id="aleatorio-btn">Aleatorio</button>
+            </div>
+        </form>
+    
+    </div>
+    
+ <!-- Vinculamos el archivo JavaScript -->
+ <script src="script.js"></script> 
+</body>
+</html>
